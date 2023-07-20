@@ -1,3 +1,4 @@
+//можно скопировать 
 const ReactDOMServer = require('react-dom/server');
 const React = require('react');
 
