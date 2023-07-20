@@ -1,7 +1,7 @@
 const React = require('react');
-const Navbar = require('./Navbar');
+// const Navbar = require('./Navbar');
 
-module.exports = function Layout({ title, children, user }) {
+module.exports = function Layout({ title, children }) {
   return (
     <html lang="en">
       <head>
@@ -12,12 +12,10 @@ module.exports = function Layout({ title, children, user }) {
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        {/* <link rel="stylesheet" href="/css/style.css" /> */}
+        <link rel="stylesheet" href="/style.css" />
       </head>
-      <body>
-        <Navbar user={user} />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 };
+
