@@ -3,6 +3,8 @@
   width: 100vw;
   height: 100vh;
   background-color: #8d9f87;
+  justify-content: center;
+  align-items: center;
 }
 
 /* все что ниже не удаляй */
@@ -19,7 +21,7 @@ html,
 body {
   width: 100vw;
   height: 100vh;
-  background: #eee;
+  background: #8d9f87;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -83,3 +85,38 @@ nav ul a {
   object-fit: cover;
 }
 /* все что выше не удаляй */
+
+.rate {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.rateCard1 {
+  display: flex;
+  position: relative;
+  width: 600px;
+  box-shadow: 6px -5px 20px 2px;
+  top: 200px;
+  height: 500px;
+  background-color: #f0dcca;
+  justify-content: center;
+  border-radius: 30px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.form {
+  width: 500px;
+  height: 600px;
+}
+
+.deti {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+
+.input{
+  font-size: 20px;
+}
