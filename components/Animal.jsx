@@ -4,10 +4,10 @@ const React = require('react');
 
 module.exports = function Animal({ animal }) {
   const index = Math.floor(Math.random() * animal.Images.length);
-  console.log(animal);
+  console.log(animal, '===================================================================');
 
   return (
-    <div className="col_s4 ">
+    <div className="col_s4 oneAnimal" data-id={animal.id}>
       <div className="animalCard">
         <div className='ani'>{animal.name}</div>
 

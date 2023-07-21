@@ -16,6 +16,16 @@ router.get('/:idAnimal', async (req, res) => {
   res.renderComponent(AnimalPage, { animal });
 });
 
+router.delete('/:idAnimal/delete', async (req, res) => {
+  try {
+    const { idAnimal } = req.params;
+    const delAnimal = await Animal.destroy({ where: { id: idAnimal } });
+    res.json({ delAnimal });
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+});
+
 router.post('/addAnimal', async (req, res) => {
   try {
     const { name, image, description } = req.body;
@@ -35,8 +45,9 @@ router.post('/addAnimal', async (req, res) => {
       res.json({
         html: res.renderComponent(oneAnimal, { animal: newAnimal }, { htmlOnly: true }),
       });
+    } else {
+      res.json({ message: 'Заполните все поля!' });
     }
-    res.json({ message: 'Заполните все поля!' });
   } catch (error) {
     res.json({ message: error.message });
   }

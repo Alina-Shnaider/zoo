@@ -1,13 +1,20 @@
 const AddForm = document.getElementById('addForm');
 const AnimalsList = document.querySelector('.row_animalsList');
 
-// if (AnimalsList) {
-//   AnimalsList.addEventListener('click', async (e) => {
-//     if (e.target.classList.contains('deleteAnimal')) {
-//       const res = await fetch('/animals');
-//     }
-//   });
-// }
+if (AnimalsList) {
+  AnimalsList.addEventListener('click', async (e) => {
+    if (e.target.classList.contains('deleteAnimal')) {
+      const oneAnimal = e.target.closest('.oneAnimal');
+      const res = await fetch(`/api/animals/${oneAnimal.dataset.id}/delete`, {
+        method: 'DELETE',
+      });
+      const data = await res.json();
+      if (data.delAnimal) {
+        oneAnimal.remove();
+      }
+    }
+  });
+}
 
 if (AddForm) {
   AddForm.addEventListener('submit', async (e) => {
