@@ -14,10 +14,12 @@ module.exports = function Animal({ animal }) {
         <div className="animal-image">
           <img src={animal.Images[index].url} />
 
-          <div></div>
-           
-          <a  className='animaltext'href={`/animals/${animal.id}`}>О зверушке!</a>
-        
+
+          <div>
+          <button className='deleteAnimal'>Удалить</button>
+          </div>
+          <a href={`/animals/${animal.id}`}>О зверушке!</a>
+
         </div>
       </div>
     </div>
