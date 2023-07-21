@@ -6,7 +6,7 @@ module.exports = function Admin({ title }) {
     <Layout title={title}>
       <div className="rate">
         <div className="rateCard1">
-          <form className="form" action="/api/products/addProduct" method="POST">
+          <form className="login" action="/api/auth/login" method="POST">
             <div className="row">
               <div className="deti">Регистрация</div>
               <div className="input">
@@ -17,7 +17,7 @@ module.exports = function Admin({ title }) {
             <div className="row">
               <div className="input">
                 <div className="day off">Пароль</div>
-                <input name="name" id="name" className="validate" required />
+                <input name="password" id="name" className="validate" required />
               </div>
             </div>
             <button className="btn" type="submit">
