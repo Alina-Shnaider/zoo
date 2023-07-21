@@ -6,12 +6,10 @@ const ssr = require('./middleware/renderComponent');
 const serverConfig = require('./config/serverConfig');
 const indexRouter = require('./routes/index.route');
 
-
 const app = express();
 
 const PORT = 3000;
 serverConfig(app);
-
 
 app.use('/', indexRouter);
 

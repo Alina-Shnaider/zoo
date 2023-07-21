@@ -3,7 +3,7 @@ const React = require('react');
 module.exports = function AddForm({ title }) {
   return (
     <div className="form_row">
-      <div className="s12 pink lighten-4 ">
+      <div className="s12  ">
         <form
           className="addForm"
           id="addForm"
