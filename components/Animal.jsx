@@ -1,5 +1,5 @@
 const React = require('react');
-const slider = require('./Slider')
+// const slider = require('./Slider')
 
 module.exports = function Animal({animal}) {
   return (
@@ -7,7 +7,7 @@ module.exports = function Animal({animal}) {
       <div className="animalCard">
         <div>{animal.name}</div>
         <div>
-          <Slider/>
+          {/* <Slider/> */}
         </div>
         <a href="">О зверушке!</a>
       </div>
