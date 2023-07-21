@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const Admin = require('../../components/AdminRate');
-// const Rate = require('../../components/Rate');
+const AdminRate = require('../../components/AdminRate');
+const { Tarif, People } = require('../../db/models');
 
-router.get('/', (req, res) => {
-  res.renderComponent(Admin, { title: 'Admin' });
+router.get('/', async (req, res) => {
+  const rate = await Tarif.findAll({ include: { model: People } });
+  res.renderComponent(AdminRate, { title: 'Тарифы', rate });
 });
 
 module.exports = router;

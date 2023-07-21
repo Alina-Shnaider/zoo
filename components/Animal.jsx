@@ -4,10 +4,10 @@ const React = require('react');
 
 
 
-
 module.exports = function Animal({animal}) {
 
   const index = Math.floor(Math.random() * animal.Images.length)
+
 
   return (
     <div className="col s4 ">
@@ -17,11 +17,9 @@ module.exports = function Animal({animal}) {
         <div className="animal-image">
           <img  src={animal.Images[index].url} />
 
-        <div>
-         
-
+          <div></div>
+          <a href={`/animals/${animal.id}`}>О зверушке!</a>
         </div>
-        <a href={`/animals/${animal.id}`}>О зверушке!</a>
       </div>
     </div>
     </div>
