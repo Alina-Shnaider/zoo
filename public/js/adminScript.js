@@ -5,6 +5,7 @@ if (updRate) {
     el.addEventListener('submit', async (e) => {
       e.preventDefault();
       const { weekend, dayOff, action } = e.target;
+      console.log(e.target);
       // const { id } = e.target.dataset;
       // const  id  = e.target.dataset.id;
       const res = await fetch(action, {

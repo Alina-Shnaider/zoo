@@ -4,8 +4,8 @@ const Layout = require('./Layout');
 module.exports = function AnimalPage({ animal }) {
   return (
     <Layout>
-      <div>
-        <h1>{animal.name}</h1>
+      <div className='animalPage'>
+        <h1 className=''>{animal.name}</h1>
         {animal.Images.map((image) => (
           <img src={image.url} />
         ))}
