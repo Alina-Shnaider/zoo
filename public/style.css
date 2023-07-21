@@ -1,1 +1,46 @@
-.tng{}  
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #8d9f87;
+  justify-content: center;
+  align-items: center;
+}
+
+.object img {
+  width: 500px;
+  height: 800px;
+  left: 90px;
+  position: relative;
+  bottom: 20px;
+  box-shadow: 5px -5px 50px 3px;
+}
+
+nav ul a {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 30px;
+  color: #f0dcca;
+}
+
+.object {
+  display: flex;
+  width: 1400px;
+  height: 850px;
+  background-color: #f0dcca;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.text {
+  position: relative;
+  right: 250px;
+  width: 500px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 30px;
+  top: 100px;
+}
