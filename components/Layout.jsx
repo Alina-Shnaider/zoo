@@ -19,6 +19,8 @@ module.exports = function Layout({ title, children }) {
 
       <script defer src= './js/adminScript.js'></script>
 
+      {/* <script defer src = './js/' */}
+
       </head>
       <body>
         <Navbar/>
