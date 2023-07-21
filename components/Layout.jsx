@@ -15,9 +15,9 @@ module.exports = function Layout({ title, children }) {
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link rel="stylesheet" href="/style.css" />
 
-        <script defer src='/js/AnimalScript.js'></script>
+        <script defer src='./js/AnimalScript.js'></script>
 
-      <script defer src= '/js/adminScript.js'></script>
+      <script defer src= './js/adminScript.js'></script>
 
       </head>
       <body>

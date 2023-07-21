@@ -16,6 +16,7 @@ module.exports = function Animal({ animal }) {
 
 
           <div>
+          <button className='updateAnimal'>Изменить</button>
           <button className='deleteAnimal'>Удалить</button>
           </div>
           <a href={`/animals/${animal.id}`}>О зверушке!</a>

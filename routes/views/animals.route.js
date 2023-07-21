@@ -7,7 +7,6 @@ const oneAnimal = require('../../components/Animal');
 
 router.get('/', async (req, res) => {
   const animals = await Animal.findAll({ include: Image });
-  console.log(animals);
   res.renderComponent(AnimalsList, { title: 'Animals', animals });
 });
 
@@ -17,22 +16,30 @@ router.get('/:idAnimal', async (req, res) => {
   res.renderComponent(AnimalPage, { animal });
 });
 
-router.post('/addAnimal', async (req,res)=>{
+router.post('/addAnimal', async (req, res) => {
   try {
-    const {name, image, description} = req.body
-    if(name && image && description){
+    const { name, image, description } = req.body;
+    if (name && image && description) {
       const animal = await Animal.create({
         name,
         description,
-      })
+      });
+      const imageAnimal = await Image.create({
+        url: image,
+        animalId: animal.id,
+      });
+      const newAnimal = await Animal.findOne({
+        where: { id: animal.id },
+        include: { model: Image },
+      });
       res.json({
-        html: res.renderComponent(oneAnimal, {animal}, {htmlOnly: true})
-      })
+        html: res.renderComponent(oneAnimal, { animal: newAnimal }, { htmlOnly: true }),
+      });
     }
     res.json({ message: 'Заполните все поля!' });
   } catch (error) {
-    res.json({message:error.message})
+    res.json({ message: error.message });
   }
-})
+});
 
 module.exports = router;
