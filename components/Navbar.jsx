@@ -16,15 +16,20 @@ module.exports = function Navbar({ user }) {
             <li>
               <a href="/adminRate">Тарифы</a>
             </li>
+            <li>
+              <a href="/">Меню</a>
+            </li>
             {/* <li className="logout">
                 <h3>Logout</h3>
               </li> */}
           </>
-          {/* //   ) : (
-        //     <li>
-        //       <a href="/auth/reg">Регистрация</a>
-        //     </li>
-        //   )} */}
+          {/* ) : ( */}
+          {/* //{' '} */}
+          {/* <li>
+            // <a href="/animals">Регистрация</a>
+            //{' '} */}
+          {/* </li> */}
+          {/* )} */}
         </ul>
       </div>
     </nav>

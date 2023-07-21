@@ -5,7 +5,7 @@ if (updRate) {
     el.addEventListener('submit', async (e) => {
       e.preventDefault();
       const { weekend, dayOff, action } = e.target;
-      console.log(e.target);
+
       // const { id } = e.target.dataset;
       // const  id  = e.target.dataset.id;
       const res = await fetch(action, {
@@ -19,9 +19,16 @@ if (updRate) {
         }),
       });
       const data = await res.json();
-      // if (data.productUpd[0] > 0) {
-      //   window.location.href = '/products';
-      // }
+      console.log(data);
+      if (data.message === 'ok') {
+        const div = document.querySelector('.textOk');
+        console.log(div);
+        div.innerHTML = 'Изменения успешно сохранены';
+        function set() {
+          document.querySelector('.textOk').innerText = '';
+        }
+        setTimeout(set, 2000);
+      }
     })
   );
 }
