@@ -1,7 +1,7 @@
 const Layout = require('./Layout');
 const React = require('react');
 
-module.exports = function Rate({ title }) {
+module.exports = function AdminRate({ title }) {
   return (
     <Layout title={title}>
       <div className="rate">

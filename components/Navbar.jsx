@@ -14,7 +14,7 @@ module.exports = function Navbar({ user }) {
               <a href="/animals">Наши животные</a>
             </li>
             <li>
-              <a href="/rate">Тарифы</a>
+              <a href="/adminRate">Тарифы</a>
             </li>
             {/* <li className="logout">
                 <h3>Logout</h3>
