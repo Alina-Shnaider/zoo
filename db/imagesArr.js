@@ -41,7 +41,7 @@ module.exports = [
   },
   {
     animalId: 4,
-    url: 'https://www.yuga.ru/media/d6/86/photo_2018-06-30_12-58-09__wuob931.jpg',
+    url: 'https://www.belta.by/images/storage/news/with_archive/2020/000029_1588566847_389412_big.jpg',
   },
   {
     animalId: 4,
