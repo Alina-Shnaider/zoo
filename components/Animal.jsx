@@ -1,15 +1,18 @@
 const React = require('react');
-const slider = require('./Slider')
+// const img = require('../db/models')
+
+// const slider = require('./Slider')
 
 module.exports = function Animal({animal}) {
+
   return (
     <div className="col s4 ">
       <div className="animalCard">
         <div>{animal.name}</div>
-        <div>
-          <Slider/>
+        <div className="animal-image">
+          {/* <img className="imgGun" src={images.url} /> */}
         </div>
-        <a href="">О зверушке!</a>
+        <a href={`/animals/${animal.id}`}>О зверушке!</a>
       </div>
     </div>
   );
