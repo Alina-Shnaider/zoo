@@ -1,5 +1,5 @@
 const React = require('react');
-// const Navbar = require('./Navbar');
+const Navbar = require('./Navbar');
 
 module.exports = function Layout({ title, children }) {
   return (
@@ -14,7 +14,9 @@ module.exports = function Layout({ title, children }) {
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link rel="stylesheet" href="/style.css" />
       </head>
-      <body>{children}</body>
+      <body>
+        <Navbar/>
+        {children}</body>
     </html>
   );
 };
